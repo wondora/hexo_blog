@@ -5,6 +5,7 @@ const OpenGraph = require('hexo-component-inferno/lib/view/misc/open_graph');
 const StructuredData = require('hexo-component-inferno/lib/view/misc/structured_data');
 const Plugins = require('./plugins');
 
+
 function getPageTitle(page, siteTitle, helper) {
     let title = page.title;
 
@@ -53,8 +54,9 @@ module.exports = class extends Component {
 
         const language = page.lang || page.language || config.language;
         const fontCssUrl = {
-            default: fontcdn('Ubuntu:wght@400;600&family=Source+Code+Pro', 'css2'),
-            cyberpunk: fontcdn('Oxanium:wght@300;400;600&family=Roboto+Mono', 'css2')
+            default: fontcdn("Ubuntu:wght@400;600&family=Source+Code+Pro", "css2"),
+  	cyberpunk: fontcdn("Oxanium:wght@300;400;600&family=Roboto+Mono", "css2"),
+  	nanumgothic: fontcdn("Nanum+Gothic:wght@400&family=Roboto", "css2"),
         };
 
         let hlTheme, images;
@@ -167,7 +169,8 @@ module.exports = class extends Component {
             {favicon ? <link rel="icon" href={url_for(favicon)} /> : null}
             <link rel="stylesheet" href={iconcdn()} />
             {hlTheme ? <link rel="stylesheet" href={cdn('highlight.js', '9.12.0', 'styles/' + hlTheme + '.css')} /> : null}
-            <link rel="stylesheet" href={fontCssUrl[variant]} />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href={fontCssUrl['nanumgothic']} rel="stylesheet" />
             <link rel="stylesheet" href={url_for('/css/' + variant + '.css')} />
             <Plugins site={site} config={config} helper={helper} page={page} head={true} />
 
