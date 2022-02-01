@@ -161,9 +161,12 @@ article:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: disqus
-    # Disqus shortname
-    shortname: 'wondora-github-io'
+  type: utterances
+  repo: chinsun9/chinsun9.github.io
+  issue_term: pathname
+  label: blog comments
+  theme: github-light
+  crossorigin: anonymous
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 #donates:
