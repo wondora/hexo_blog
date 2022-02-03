@@ -107,8 +107,8 @@ navbar:
     menu:
 #        Home: /
 #        Archives: /archives
-        Categories: /categories
-        Tags: /tags
+ #       Categories: /categories
+ #      Tags: /tags
      # About: /about
     # Links to be shown on the right of the navigation bar
     links:
