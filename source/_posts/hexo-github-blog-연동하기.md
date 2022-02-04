@@ -1,7 +1,7 @@
 ---
 title: hexo + github + blog 연동하기
 date: 2022-01-31 17:21:27
-categories: [Webprogramming, Hexo]
+categories: [Web programming, Hexo]
 tags: [hexo]
 ---
 
